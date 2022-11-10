@@ -1,66 +1,46 @@
-// написати функцію, яка перевіряє вік користувача на повноліття
-// const userInput = "21"; //prompt("enter user age:");
-// const leadToNomber = function (value) {
-//   if (isNaN(Number(value)) || value === null || value === "" || value === " ") {
-//     return NaN;
-//   }
-//   return Number(value);
-// };
-// /**
-//  *
-//  * @param {number} age
-//  * @returns {number | null}
-//  */
-// const adultOrNot = function (age) {
-//   if (age < 18) {
-//     return false;
-//   }
-//   return true;
-// };
+//  1) написати функцію, яка повертає слово 'odd' або 'even', в залежності від прийнятого аргументу(число). Значення для перевірки функції вводить користувач.
 
-// console.log(adultOrNot(leadToNomber(userInput)))
-// const AGE_ADULT = 18
-// const isAdult = function (age, AGE_ADULT) {
-//   if (age >= AGE_ADULT) {
-//     return true;
-//   }
-//   return false;
-// }
+const number = prompt("chek your number");
+/**
+ *
+ * @param {number} value
+ * @returns {number}
+ */
+const leadToNomber = function (value) {
+  if (isNaN(Number(value)) || value === null || value === "" || value === " ") {
+    return NaN;
+  }
+  return Number(value);
+};
 
-// функція приймає 2 параметри і перевіряє крастність першого другим
+/**
+ *
+ * @param {number} value
+ * @returns {string}
+ */
+const isOddOrEven = function (value) {
+  if (value % 2 === 0) {
+    return "even";
+  }
+  return "odd";
+};
+console.log(isOddOrEven(leadToNomber(number)));
 
-// const firstInput = 20;
-// const secondInput = 3;
+// 2)написати функцію, яка приймає два аргументи і, якщо аргументи одного типу, то повертає той, який має більше значення (якщо значення рівні - повертаємо null), інакше(якщо різного типу) теж повертає null.
 
-// /**
-//  *
-//  * @param {Number} firstInput
-//  * @param {Number} secondInput
-//  * @returns {Boolean}
-//  */
-// const checkMultiplicity = function (firstInput, secondInput) {
-// //   if (firstInput % secondInput === 0) {
-// //     return true;
-// //   }
-// //   return false;
-//     return (firstInput % secondInput === 0);
-// };
-// console.log(checkMultiplicity(firstInput, secondInput));
-
-// написати функцію, яка приймає 3 числа і перевіряє чи можуть бути ці числа довжинами сторон одного трикутника
-
-// const num1 = 3;
-// const num2 = 4;
-// const num3 = 5;
-
-// /**
-//  * 
-//  * @param {number} num1 
-//  * @param {number} num2 
-//  * @param {number} num3 
-//  * @returns {boolean}
-//  */
-// const checkTriangle = function (num1, num2, num3) {
-//     return (num1 + num2 > num3 && num2 + num3 > num1 && num1 + num3 > num2);
-// };
-// console.log(checkTriangle(num1, num2, num3));
+const arg1 = 44;
+const arg2 = 44;
+const comparaty = (arg1, arg2);
+const getMaxCompare = function (comparaty) {
+  if (arg1 === arg2) {
+    return null;
+  }
+  if (typeof arg1 === typeof arg2) {
+    if (arg1 < arg2) {
+      return arg2;
+    }
+    return arg1;
+  }
+  return null;
+};
+console.log(getMaxCompare(comparaty));
